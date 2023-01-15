@@ -1,0 +1,29 @@
+1.cd "F:/Extra work/GIT" - To move to particular folder
+2. git init git-demo - To create a new folder in current directory named "git-demo" and initialize that new folder for git
+3. git init  - To make current folder as git initialized
+4. git status  - Shows which files have been modified in the working directory vs Git's staging area.
+5. git add filename  - Adds the new or newly modified file-name to Git's staging area (index).
+6. git commit filename -m "Commit message"  - Commits all files currently in Git's staging area. The -m parameter allows for a commit message directly from the command    line.
+7. notepad filename  - Creates a new file and opens it in notepad
+8. git commit -am "Adding and commiting in one command"  - If the file is already being tracked by git then the modifications to that file can be added to the git    staging area and commited with a single command.
+9. git add .  - Adds all the newly added/modified files to the git staging area.
+10.git commit -m "Message"  - Commits all the files from staging area.
+11.git checkout --filename  - Reverts back all the changes made in the file. (Undo the changes)
+12.git reset HEAD filename  - Recalls the modified/added file from git staging area. (Unstage file)
+13.git log  - Displays history of all commits made by us
+14.git help log  - Displays all git commands
+15.git log --oneline --graph --decorate --color  - Displays the commit history in much more readable way(in one line)
+16.git rm filename  - Deletes the commited file from git repository.(This change again needs a commit to make it permanantly deleted)
+17.git mv filename foldername  - Moves a file from master repository to the subfolder
+18.notepad .gitignore  - Adds a .gitignore file that contains the info about files to be ignore and git will not count them for staging if we do a git status
+
+19.We need to create a .ssh file to store the key that we need to add in our github account for authintication purpose. In the .ssh folder, ssh key is stored inside the default file id_rsa.pub. Following are the commands needed:
+cd ~ : Go to home directory
+mkdir .ssh : Create a .ssh folder
+cd .ssh : Move to .ssh
+ssh-keygen -t rsa -C "jason@jasongtaylor.com" : Generate an SSH key for the given mail id
+notepad id_rsa.pub : Open the key file and copy the key. Go to github account and pasete it inside SSH keys
+ssh -T git@github.com : Connect to github
+
+20.To change the name of branch, we can do it in github as well in our local. Following command can be used to change it in local:
+git branch -m main  - This changes the current branch name to main
